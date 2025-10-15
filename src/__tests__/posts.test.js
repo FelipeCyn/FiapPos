@@ -12,7 +12,7 @@ describe("Posts API", () => {
   });
 
   describe("POST /posts", () => {
-    it("deve criar um novo post teste", async () => {
+    it("deve criar um novo post", async () => {
       const newPost = {
         titulo: "Post de Teste",
         conteudo: "Conteúdo do teste",
