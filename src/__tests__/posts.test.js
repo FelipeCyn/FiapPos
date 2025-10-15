@@ -19,8 +19,10 @@ describe("Posts API", () => {
         autor: "Testador",
       };
 
-      const response = await request(app).post("/posts").send(newPost);
-      // .expect(201);
+      const response = await request(app)
+        .post("/posts")
+        .send(newPost)
+        .expect(201);
 
       expect(response.body).toHaveProperty("id");
       expect(response.body.titulo).toBe(newPost.titulo);
